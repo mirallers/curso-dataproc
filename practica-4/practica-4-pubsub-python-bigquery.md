@@ -5,6 +5,7 @@ e ingestarla dentro de una tabla de bigquery.
 
 
 ## Pasos a seguir:
+### 1.- Crear proyecto llamado `pub-sub-subscriber-bigquery`
 
 ### 2.- Crear un tópico llamado `topico-datos`
 
