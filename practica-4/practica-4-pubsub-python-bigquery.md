@@ -89,7 +89,7 @@ donde el generador de datos cumpla las siguientes caracteristicas:
 
 ### 4.- Crear base de datos y tablas en Bigquery:
 -  Nombre de la base de datos: ``Nextgram``
--  Nombre de la base de datos: ``interaccion``
+-  Nombre de la base de datos: ``interacciones``
 
 donde la estructura de la tabla debe ser:
 
@@ -112,7 +112,7 @@ En esta parte se debe hacer un script en python que se subcriba al tópico ``top
 - Cree un campo `id` que será el código alfanumérico tras hashear todos los campos anteriores con un SHA-256.
 - Cree un campo `control` que sea las iniciales de su nombre (primer nombre, primer y segundo apellido)
     - ejemplo: **José Luis Martos García -> JMG -> control: `JMG`**
-- Ingeste dichos datos en nuestra tabla ``interaccion``.
+- Ingeste dichos datos en nuestra tabla ``interacciones``.
 
 
 ### 6.- Verificar que los datos se están ingestando con una querie.

@@ -204,7 +204,7 @@ print(f"Finalizó la publicacion. Total de mensajes enviados: {message_counter}"
     bq --location=US mk --dataset nextgram
 
     ```
--  Nombre de la base de datos: ``interaccion``
+-  Nombre de la base de datos: ``interacciones``
     ```bash
     bq mk --table nextgram.interacciones \
       date_partition:STRING,date_oprtn:TIMESTAMP,user:STRING,action:STRING,sub_action:STRING,metadata:STRING,device:STRING,location:STRING,id:STRING,control:STRING
@@ -231,7 +231,7 @@ En esta parte se debe hacer un script en python que se subcriba al tópico ``top
 - Cree un campo `id` que será el código alfanumérico tras hashear todos los campos anteriores con un SHA-256.
 - Cree un campo `control` que sea las iniciales de su nombre (primer nombre, primer y segundo apellido)
     - ejemplo: **José Luis Martos García -> JMG -> control: `JMG`**
-- Ingeste dichos datos en nuestra tabla ``interaccion``.
+- Ingeste dichos datos en nuestra tabla ``interacciones``.
 
 
 ```python
@@ -288,6 +288,6 @@ except KeyboardInterrupt:
 ### 6.- Verificar que los datos se están ingestando con una querie.
 ```sql
 SELECT *
-FROM `nextgram.interaccion`
+FROM `nextgram.interacciones`
 LIMIT 10;
 ```
